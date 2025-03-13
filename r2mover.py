@@ -39,7 +39,7 @@ class Mover(Node):
                 # check which key was entered
                 if cmd_char == 's':
                     # stop moving
-                    twist.linear.x = 12.0
+                    twist.linear.x = 0.0
                     twist.angular.z = 0.0
                 elif cmd_char == 'w':
                     # move forward
