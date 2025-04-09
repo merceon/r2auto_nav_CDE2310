@@ -34,7 +34,6 @@ class Heat_source_follower(Node):
         shortest_distance = np.nanargmin(laser_range)
         angle_degrees = shortest_distance * (18 / 11)
         if shortest_distance <= 0.5 and (angle_degrees < 5 or angle_degrees > 355):
-            print("Obstacle detected, stopping robot.")
             cmd = Twist()
             cmd.linear.x = 0.0
             cmd.angular.z = 0.0
